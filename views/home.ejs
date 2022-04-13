@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Home</title>
+        <link href="css\style1.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>Click on any book to see details</h1>
+        <table>
+            <tr>
+                <% books.forEach(s=>
+                    { %> 
+                    <tr>
+                        <td>
+                            <a href=books/<%= s.booknumber%>><%= s.book %></a>
+                        </td>
+                    </tr>
+                    <% });
+                %>
+            </tr>
+        </table>
+        <%- include('footer') %>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    font-family: "Open Sans", "Arial", "Calibri";
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 98%;
+    color: white;
+    text-align: center;
+}
+tr, td {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+}
+table {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgrey;
+    position: fixed;
+    left: 0;
+    width: 98%;
+    text-align: center;
+}
+a:link {
+    text-decoration: none;
+}

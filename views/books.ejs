@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Home</title>
+        <link href="..\css\style1.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1><%= books.book %></h1>
+        <table>
+            <tr>
+                <tr>
+                    <td>
+                        <%= books.author %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href=<%= books.link %>>Buy on Amazon!</a>
+                    </td>
+                </tr>
+            </tr>
+        </table>
+        <%- include('footer') %>
+    </body>
+</html>
