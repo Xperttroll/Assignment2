@@ -27,7 +27,9 @@ h1 {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 99%;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
     color: white;
     text-align: center;
 }
@@ -56,4 +58,5 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    color: white;
   }
