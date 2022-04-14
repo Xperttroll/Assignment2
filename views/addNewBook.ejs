@@ -1,14 +1,25 @@
-<div>
-    <form>
-      <label for="bookName">Name</label>
-      <input type="text" id="bookName" placeholder="Book name..">
-  
-      <label for="authorName">Author Name</label>
-      <input type="text" id="authorName" placeholder="Author name..">
+<!DOCTYPE html>
 
-      <label for="link">Amazon Link</label>
-      <input type="text" id="link" placeholder="Link..">
-    
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+<html>
+    <head>
+        <title>Add New Book</title>
+        <link href="..\css\style1.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div>
+            <form>
+              <label for="bookName">Name</label>
+              <input type="text" id="bookName" placeholder="Book name..">
+            
+              <label for="authorName">Author Name</label>
+              <input type="text" id="authorName" placeholder="Author name..">
+            
+              <label for="link">Amazon Link</label>
+              <input type="text" id="link" placeholder="Link..">
+            
+              <input type="submit" value="Submit">
+            </form>
+        </div>
+        <%- include('footer') %>
+    </body>
+</html>
