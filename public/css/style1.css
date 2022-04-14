@@ -27,7 +27,9 @@ h1 {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 98%;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
     color: white;
     text-align: center;
 }
