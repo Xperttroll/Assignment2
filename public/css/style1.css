@@ -52,6 +52,7 @@ table {
 }
 a:link {
     text-decoration: none;
+    cursor: pointer;
 }
 input[type=text], select {
   width: 100%;
@@ -61,6 +62,18 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+input[type=submit] {
+    font-family: "Open Sans", "Arial", "Calibri";
+    font-weight: bolder;
+    width: 10%;
+    background-color: lightgreen;
+    color: black;
+    padding: 14px 20px;
+    margin: auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 label {
     color: white;
