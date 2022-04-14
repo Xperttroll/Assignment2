@@ -39,7 +39,7 @@ tr, td {
 }
 td {
     border: 1px solid lightgray;
-    border-radius: 25px;
+    border-radius: 5px;
     background-color: white;
 }
 table {
