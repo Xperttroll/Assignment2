@@ -28,20 +28,23 @@ h1 {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    margin: auto;
+    padding: 12px 12px;
     color: white;
     text-align: center;
 }
 tr, td {
     padding: 10px;
     margin: 10px;
+}
+td {
+    border: 1px solid lightgray;
+    border-radius: 25px;
     background-color: white;
 }
 table {
     padding: 10px;
     margin: 10px;
-    background-color: lightgrey;
     position: fixed;
     left: 0;
     width: 98%;
@@ -51,12 +54,14 @@ a:link {
     text-decoration: none;
 }
 input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+label {
     color: white;
-  }
+}
