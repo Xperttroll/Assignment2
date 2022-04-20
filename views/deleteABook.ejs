@@ -2,23 +2,22 @@
 
 <html>
     <head>
-        <title><%= books.book %></title>
-        <link href="..\css\style1.css" type="text/css" rel="stylesheet"/>
+        <title>Home</title>
+        <link href="css\style1.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
-        <h1><%= books.book %></h1>
+        <h1>Click on any book to see details</h1>
         <table>
             <tr>
-                <tr>
-                    <td>
-                        <%= books.author %>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href=<%= books.link %>>Buy on Amazon!</a>
-                    </td>
-                </tr>
+                <% books.forEach(s=>
+                    { %> 
+                    <tr>
+                        <td>
+                            <a href=books/<%= s.booknumber%>><%= s.book %></a>
+                        </td>
+                    </tr>
+                    <% });
+                %>
             </tr>
         </table>
         <%- include('footer') %>
