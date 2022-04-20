@@ -64,6 +64,15 @@ app.get(
     }
 );
 
+app.get(
+    "/DeleteABook",
+    homeController.getAllBooks,
+    (req, res, next) => {
+        console.log(req.data);
+        res.render("deleteABook", { books: req.data});
+    }
+);
+
 app.post("/", (req, res) => {
     res.writeHead(httpStatus.StatusCodes.OK, plainTextContentType);
     res.end("POSTED");
