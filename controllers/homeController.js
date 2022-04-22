@@ -18,11 +18,10 @@ exports.getAllBooks = (req, res, next) => {
         next();
     });
 };
-module.exports = {
-    new: (req, res) => {
+exports.new = (req, res) => {
         res.render("addNewBook");
-    },
-    create: (req, res, next) => {
+    };
+exports.create = (req, res, next) => {
         let bookParams = {
             name: req.body.bookName,
             author: req.body.authorName,
@@ -39,13 +38,9 @@ module.exports = {
                 console.log(`Error saving book: ${error.message}`);
                 next(error);
             });
-    },
-    redirectView: (req, res, next) => {
+    };
+exports.redirectView = (req, res, next) => {
         let redirectPath = res.locals.redirect;
         if (redirectPath) res.redirect(redirectPath);
         else next();
-    }
-    //delete: (req, res, next) => {
-
-    //}
-};
+    };
