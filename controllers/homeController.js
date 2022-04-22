@@ -22,21 +22,21 @@ exports.new = (req, res) => {
         res.render("addNewBook");
     };
 exports.create = (req, res, next) => {
-        let bookParams = {
-            name: req.body.bookName,
-            author: req.body.authorName,
-            link: req.body.link
-        };
-        Book.create(bookParams)
-            .then(book => {
-                res.locals.redirect = "/home";
-                res.locals.book = book;
-                next();
-            })
-            .catch(error => {
-                console.log(`Error saving book: ${error.message}`);
-                next(error);
-            });
+    let bookParams = {
+        book: req.body.bookName,
+        author: req.body.authorName,
+        link: req.body.link
+    };
+    Book.create(bookParams)
+        .then(books => {
+            res.locals.redirect = "/home";
+            res.locals.books = books;
+            next();
+        })
+        .catch(error => {
+            console.log(`Error saving book: ${error.message}`);
+            next(error);
+        });
     };
 exports.redirectView = (req, res, next) => {
         let redirectPath = res.locals.redirect;

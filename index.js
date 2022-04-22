@@ -56,7 +56,7 @@ app.get(
 );
 
 app.get("/addNewBook", homeController.new);
-app.post("/addNewBook", homeController.create, homeController.redirectView);
+app.post("/create", homeController.create, homeController.redirectView);
 //app.delete("/books/:id/delete", homeController.delete, homeController.redirectView);
 
 app.get(
@@ -74,6 +74,8 @@ app.post("/", (req, res) => {
 });
 
 const mongoose = require("mongoose");
+require('mongoose-long')(mongoose);
+const {Types: {Long}} = mongoose;
 
 require("dotenv").config();
 const uri = process.env.ATLAS_URI;
@@ -87,7 +89,7 @@ db.once("open", () => {
     console.log("Successfully connected to MongoDB using Mongoose!");
 });
 
-const Book = require("./models/books")
+const Book = require("./models/books");
 
 app.listen(app.get("port"), () => {
 console.log(`The Server has started and is running at http://localhost:${app.get("port")}`);

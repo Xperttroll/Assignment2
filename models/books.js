@@ -1,5 +1,8 @@
-const mongoose = require("mongoose"),
-    bookSchema = mongoose.Schema({
+const mongoose = require("mongoose");
+require('mongoose-long')(mongoose);
+const {Types: {Long}} = mongoose;
+
+var bookSchema = mongoose.Schema({
         book: {
             type: String,
             required: true
@@ -9,8 +12,8 @@ const mongoose = require("mongoose"),
             required: true
             },
         booknumber: {
-            type: String,
-            required: true
+            type: Long
+            //required: true
             }, 
         link: {  
             type: String,
