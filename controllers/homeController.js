@@ -25,7 +25,6 @@ exports.create = (req, res, next) => {
         let bookParams = {
             name: req.body.bookName,
             author: req.body.authorName,
-            bookNumber: req.body.bookNumber,
             link: req.body.link
         };
         Book.create(bookParams)
