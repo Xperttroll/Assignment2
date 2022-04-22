@@ -4,11 +4,12 @@ body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
 h1 {
     color: white;
+    position: relative;
 }
 
 @keyframes gradient {
@@ -45,7 +46,6 @@ td {
 table {
     padding: 10px;
     margin: 10px;
-    position: fixed;
     left: 0;
     width: 98%;
     text-align: center;
@@ -77,4 +77,13 @@ input[type=submit] {
 }
 label {
     color: white;
+}
+#delete {
+    color: red;
+    background-color: lightgray;
+    font-weight: bolder;
+    padding: 10px;
+}
+#del {
+    background-color: lightgray;
 }

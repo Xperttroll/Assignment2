@@ -43,3 +43,15 @@ exports.redirectView = (req, res, next) => {
         if (redirectPath) res.redirect(redirectPath);
         else next();
     };
+exports.delete = (req, res, next) => {
+    let bookId = req.params.id;
+    Book.findByIdAndRemove(bookId)
+        .then(() => {
+            res.locals.redirect = "/home";
+            next();
+        })
+        .catch(error => {
+            console.log(`Error deleting book by ID: ${error.message}`);
+            next();
+        });
+}

@@ -7,6 +7,14 @@ const plainTextContentType = {
     "Content-Type": "text/plain",
 };
 
+const methodOverride = require("method-override");
+
+app.use(
+    methodOverride("_method", {
+        methods: ["POST", "GET"]
+    })
+);
+
 app.use(
     express.urlencoded({
         extended: false
@@ -57,7 +65,7 @@ app.get(
 
 app.get("/addNewBook", homeController.new);
 app.post("/create", homeController.create, homeController.redirectView);
-//app.delete("/books/:id/delete", homeController.delete, homeController.redirectView);
+app.delete("/books/:id/delete", homeController.delete, homeController.redirectView);
 
 app.get(
     "/DeleteABook",
