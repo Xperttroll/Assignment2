@@ -55,14 +55,9 @@ app.get(
     }
 );
 
-app.get(
-    "/addNewBook",
-    homeController.getAllBooks,
-    (req, res, next) => {
-        console.log(req.data);
-        res.render("addNewBook", { books: req.data});
-    }
-);
+app.get("/addNewBook", homeController.new);
+app.post("/books/create", homeController.create, homeController.redirectView);
+app.delete("/books/:id/delete", homeController.delete, homeController.redirectView);
 
 app.get(
     "/DeleteABook",
