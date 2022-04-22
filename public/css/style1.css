@@ -24,6 +24,12 @@ h1 {
     }
 }
 
+.foot {
+   height: 100%;
+   width: 100%;
+   cursor: pointer; 
+}
+
 .footer {
     position: fixed;
     left: 0;
@@ -82,7 +88,9 @@ label {
     color: red;
     background-color: lightgray;
     font-weight: bolder;
-    padding: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
 }
 #del {
     background-color: lightgray;
