@@ -57,7 +57,7 @@ app.get(
 
 app.get("/addNewBook", homeController.new);
 app.post("/books/create", homeController.create, homeController.redirectView);
-app.delete("/books/:id/delete", homeController.delete, homeController.redirectView);
+//app.delete("/books/:id/delete", homeController.delete, homeController.redirectView);
 
 app.get(
     "/DeleteABook",
