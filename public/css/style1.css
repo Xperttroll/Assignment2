@@ -95,3 +95,6 @@ label {
 #del {
     background-color: lightgray;
 }
+.container {
+    padding-bottom: 100px;
+}
